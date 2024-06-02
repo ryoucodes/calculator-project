@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #000000;
+    outline: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #adadad;
+}
+
+.all {
+    width: 100%;
+    max-width: 440px;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-areas:
+    "answer answer answer answer"
+    "clear clear backspace divide"
+    "seven eight none multiply"
+    "four five six minus"
+    "one two three add"
+    "zero zero zero equal";
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.divide {
+    grid-area: divide;
+}
+
+.multiply {
+    grid-area: multiply;
+}
+
+.minus {
+    grid-area: minus;
+}
+
+.add {
+    grid-area: add;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+:where(.divide, .multiply, .minus, .add, .equal) {
+    background-color: #dfa466;
+    color: #ffffff;
+}
+
+.answer-screen {
+    grid-area: answer;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2.5rem;
+    text-align: right;
+    height: 100px;
+}
